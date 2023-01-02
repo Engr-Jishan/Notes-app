@@ -28,7 +28,9 @@ body {
 }
 
 .add-box .icon,
-.botton-contect {
+.botton-contect,
+.settings .menu li,
+.content header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,6 +40,7 @@ body {
     flex-direction: column;
     justify-content: center;
     cursor: pointer;
+    align-items: center;
 }
 
 .add-box .icon {
@@ -78,4 +81,122 @@ body {
 .note .botton-contect {
     padding-top: 10px;
     border-top: 1px solid #ccc;
+}
+
+.botton-contect span {
+    color: #6d6d6d;
+    font-size: 14px;
+}
+
+.botton-contect .settings i {
+    color: #6d6d6d;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.settings {
+    position: relative;
+}
+
+.settings .menu {
+    position: absolute;
+    bottom: 0;
+    right: -5px;
+    padding: 5px 0;
+    background: #fff;
+    border-radius: 4px;
+    transform: scale(0);
+    transform-origin: bottom right;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+}
+
+.settings:hover .menu {
+    transform: scale(1);
+}
+
+.settings .menu li {
+    width: 80px;
+    height: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0;
+    justify-content: flex-start;
+}
+
+.menu li:hover {
+    background: #fff;
+}
+
+.menu li i {
+    padding-right: 8px;
+}
+
+.popup-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.popup-box .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: z;
+    max-width: 400px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.popup .content {
+    background: #fff;
+    border-radius: 5px;
+}
+
+.popup .content header {
+    padding: 15px 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content header p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.content header i {
+    color: #8b8989;
+    cursor: pointer;
+    font-size: 23px;
+}
+
+.content form {
+    margin: 15px 25px 35px;
+}
+
+.form .row label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.content form :where(input, textarea) {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    font-size: 17px;
+    padding: 0 15px;
+    border-radius: 4px;
+    border: 1px solid #999;
+}
+
+.content form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.content form button {
+    width: 100%;
 }
